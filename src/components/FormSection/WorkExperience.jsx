@@ -2,7 +2,7 @@ import '../../styles/FormCard.css'
 
 function WorkExperience(){
     return (
-        <div className='basic-info-container'>
+        <div className='basic-info-container' id='work-experience-card'>
             
             <div className="title-container">
                 <h2>Work Experience</h2>

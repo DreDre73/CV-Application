@@ -2,7 +2,7 @@ import '../../styles/FormCard.css'
 
 function BasicInfo(){
     return (
-        <div className='basic-info-container'>
+        <div className='basic-info-container' id='personal-info-card'>
             
             <div className="title-container">
                 <h2>Personal Information</h2>

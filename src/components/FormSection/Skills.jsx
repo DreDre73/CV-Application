@@ -2,7 +2,7 @@ import '../../styles/FormCard.css'
 
 function Skills(){
     return (
-        <div className='basic-info-container'>
+        <div className='basic-info-container' id='skill-card'>
             
             <div className="title-container">
                 <h2>Add Skills</h2>
