@@ -1,0 +1,31 @@
+.header-container {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.header-text {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+
+.navbar li {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.navbar li:hover {
+  color: var(--accent);
+}
+
+  

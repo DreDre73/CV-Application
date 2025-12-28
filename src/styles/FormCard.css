@@ -1,0 +1,54 @@
+.basic-info-container {
+    background-color: gr;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem;
+
+    /* remove harsh border */
+    border: rgb(176, 174, 174) solid 2px;
+
+    /* card shadow */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: .5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: #2563eb; /* nice blue */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1e4fd8;
+}
+
+
+
+
+
+
