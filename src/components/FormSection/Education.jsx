@@ -1,38 +1,52 @@
 import '../../styles/FormCard.css'
 
-function Education(){
+function Education({ education, handleInputChange, section }) {
     return (
         <div className='basic-info-container' id='education-card'>
-            
             <div className="title-container">
                 <h2>Education</h2>
             </div>
 
             <form>
                 <div className="input-group">
-                    <label htmlFor="school-name">School Name</label>
-                    <input type="text" placeholder=''/>
+                    <label>School Name</label>
+                    <input
+                        type="text"
+                        name="schoolName"
+                        value={education.schoolName}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
 
                 <div className="input-group">
-                    <label htmlFor="degree">Degree</label>
-                    <input type="text" placeholder=''/>
+                    <label>Degree</label>
+                    <input
+                        type="text"
+                        name="degree"
+                        value={education.degree}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
-                
+
                 <div className="input-group">
-                    <label htmlFor="start-date">Start Date</label>
-                    <input type="date" placeholder=''/>
+                    <label>Start Date</label>
+                    <input
+                        type="date"
+                        name="startDate"
+                        value={education.startDate}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
 
                 <div className="input-group">
-                    <label htmlFor="end-date">End Date</label>
-                    <input type="date" placeholder=''/>
+                    <label>End Date</label>
+                    <input
+                        type="date"
+                        name="endDate"
+                        value={education.endDate}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
-
-                <div className="button-container">
-                    <button type="button" className="submit-btn">Submit</button>
-                </div>
-
             </form>
         </div>
     )

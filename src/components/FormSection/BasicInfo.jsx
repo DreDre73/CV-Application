@@ -1,17 +1,7 @@
 import '../../styles/FormCard.css'
 import { useState } from 'react'
 
-function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
-
-    function handleInputChange(event){
-
-        const inputField = event.target.name; //Which property the input/event came from
-        const inputValue = event.target.value; //Value the input/event sent
-    
-        const newInput = {...personalInfo,[inputField]: inputValue} // Copy data into new object, overwrite only the field that triggered the change
-        setPersonalInfo(newInput) 
-    
-    }
+function BasicInfo({personalInfo, handleInputChange, section}){
 
     return (
         <div className='basic-info-container' id='personal-info-card'>
@@ -28,7 +18,7 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                         placeholder=''
                         name='name'
                         value={personalInfo.name}
-                        onChange={handleInputChange}
+                        onChange={(e) => handleInputChange(section, e)}
                     />
                     
                 </div>
@@ -39,7 +29,7 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                         type="email"
                         name='email' 
                         value={personalInfo.email}
-                        onChange={handleInputChange}
+                        onChange={(e) => handleInputChange(section, e)}
                         placeholder=''
                     />
                 </div>
@@ -50,7 +40,7 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                         type="tel"
                         name='phoneNumber'
                         value={personalInfo.phoneNumber}
-                        onChange={handleInputChange} 
+                        onChange={(e) => handleInputChange(section, e)} 
                         placeholder=''
                     />
                 </div>
@@ -61,7 +51,7 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                         type="url"
                         name='linkedin' 
                         value={personalInfo.linkedin}
-                        onChange={handleInputChange}
+                        onChange={(e) => handleInputChange(section, e)}
                         placeholder=''
                     />
                 </div>
@@ -72,7 +62,7 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                         type="url"
                         name='github'
                         value={personalInfo.github}
-                        onChange={handleInputChange} 
+                        onChange={(e) => handleInputChange(section, e)}
                         placeholder=''
                     />
                 </div>
@@ -81,7 +71,6 @@ function BasicInfo({personalInfo, setPersonalInfo, onUpdate}){
                     <button 
                         type="button" 
                         className="submit-btn"
-                        onClick={onUpdate}
                     >
                         Submit
                     </button>

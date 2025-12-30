@@ -1,43 +1,62 @@
 import '../../styles/FormCard.css'
 
-function WorkExperience(){
+function WorkExperience({ workExperience, handleInputChange, section }) {
     return (
         <div className='basic-info-container' id='work-experience-card'>
-            
             <div className="title-container">
                 <h2>Work Experience</h2>
             </div>
 
             <form>
                 <div className="input-group">
-                    <label htmlFor="job-title">Company</label>
-                    <input type="text" placeholder=''/>
+                    <label>Company</label>
+                    <input
+                        type="text"
+                        name="company"
+                        value={workExperience.company}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
 
                 <div className="input-group">
-                    <label htmlFor="position">Position</label>
-                    <input type="text" placeholder=''/>
+                    <label>Position</label>
+                    <input
+                        type="text"
+                        name="position"
+                        value={workExperience.position}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
 
                 <div className="input-group">
-                    <label htmlFor="job-description">Job Description</label>
-                    <input type="text" placeholder=''/>
+                    <label>Job Description</label>
+                    <textarea
+                        type="text"
+                        name="jobDescription"
+                        value={workExperience.jobDescription}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
-                
+
                 <div className="input-group">
-                    <label htmlFor="start-date">Start Date</label>
-                    <input type="date" placeholder=''/>
+                    <label>Start Date</label>
+                    <input
+                        type="date"
+                        name="startDate"
+                        value={workExperience.startDate}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
 
                 <div className="input-group">
-                    <label htmlFor="end-date">End Date</label>
-                    <input type="date" placeholder=''/>
+                    <label>End Date</label>
+                    <input
+                        type="date"
+                        name="endDate"
+                        value={workExperience.endDate}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
-
-                <div className="button-container">
-                    <button type="button" className="submit-btn">Submit</button>
-                </div>
-
             </form>
         </div>
     )

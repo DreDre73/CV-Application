@@ -1,23 +1,22 @@
 import '../../styles/FormCard.css'
 
-function Skills(){
+function Skills({ skills, handleInputChange, section }) {
     return (
         <div className='basic-info-container' id='skill-card'>
-            
             <div className="title-container">
                 <h2>Add Skills</h2>
             </div>
 
             <form>
                 <div className="input-group">
-                    <label htmlFor="Skill">Skill</label>
-                    <input type="text" placeholder=''/>
+                    <label>Skill</label>
+                    <input
+                        type="text"
+                        name="skill"
+                        value={skills.skill}
+                        onChange={(e) => handleInputChange(section, e)}
+                    />
                 </div>
-
-                <div className="button-container">
-                    <button type="button" className="submit-btn">Submit</button>
-                </div>
-
             </form>
         </div>
     )

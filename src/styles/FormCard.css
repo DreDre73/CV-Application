@@ -1,42 +1,63 @@
+/* Card container */
 .basic-info-container {
-    background-color: gr;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     padding: 1rem;
-
-    /* remove harsh border */
-    border: rgb(176, 174, 174) solid 2px;
-
-    /* card shadow */
+    border: 2px solid rgb(176, 174, 174);
     box-shadow: 
         0 4px 6px rgba(0, 0, 0, 0.1),
         0 10px 20px rgba(0, 0, 0, 0.2);
+
+    /* Responsive behavior */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-form{
+/* Form layout */
+form {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
+    width: 100%;
 }
 
-.input-group{
+/* Input group layout */
+.input-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-input{
-    padding: .5rem;
+/* Standard input fields */
+input {
+    padding: 0.5rem;
     border: 1px solid gray;
     border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Multi-line description fields */
+textarea {
+    font-family: 'Roboto' ;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100px;   
+    resize: vertical;    
+    box-sizing: border-box;
+}
+
+/* Submit button */
 .submit-btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 500;
     color: white;
-    background-color: #2563eb; /* nice blue */
+    background-color: #2563eb; 
     border: none;
     border-radius: 6px;
     cursor: pointer;
