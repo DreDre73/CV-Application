@@ -10,7 +10,7 @@ function BasicInfo({personalInfo, handleInputChange, section}){
                 <h2>Personal Information</h2>
             </div>
 
-            <form>
+            <form>   
                 <div className="input-group">
                     <label>Full Name</label>
                     <input 
@@ -66,16 +66,6 @@ function BasicInfo({personalInfo, handleInputChange, section}){
                         placeholder=''
                     />
                 </div>
-
-                <div className="button-container">
-                    <button 
-                        type="button" 
-                        className="submit-btn"
-                    >
-                        Submit
-                    </button>
-                </div>
-
             </form>
         </div>
     )
