@@ -79,11 +79,11 @@ function Projects({ projectItems, setProjectItems }) {
       </div>
 
       {!isAdding && !isEditing && (
-        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleAdd} className='add-btn'>Add</button>
       )}
 
       {(isAdding || isEditing) && (
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="input-group">
             <label>Project Title</label>
             <input
@@ -103,10 +103,10 @@ function Projects({ projectItems, setProjectItems }) {
             />
           </div>
 
-          <button type="submit">Submit</button>
-          <button type="button" onClick={handleCancel}>
-            Cancel
-          </button>
+          <div className="form-button-group">
+              <button onClick={handleSubmit} className='submit-btn'>Submit</button>
+              <button onClick={handleCancel} className='cancel-btn'>Cancel</button>
+          </div>
         </form>
       )}
 
@@ -116,10 +116,10 @@ function Projects({ projectItems, setProjectItems }) {
             <p>{item.projectTitle}</p>
 
             {!isEditing && (
-              <>
+              <div className='button-container'>
                 <button onClick={() => handleEdit(index)}>Edit</button>
                 <button onClick={() => handleDelete(index)}>Delete</button>
-              </>
+              </div>
             )}
           </div>
         ))}

@@ -90,7 +90,7 @@ function Skills({
             </div>
 
             {(!isAdding && !isEditing) && (
-                <button onClick={handleAdd}>Add</button>
+                <button onClick={handleAdd} className='add-btn'>Add</button>
             )}
 
             {(isAdding || isEditing) && (
@@ -105,8 +105,10 @@ function Skills({
                     />
                 </div>
 
-                <button onClick={handleSubmit}>Submit</button>
-                <button onClick={handleCancel}>Cancel</button>
+                <div className="form-button-group">
+                  <button onClick={handleSubmit} className='submit-btn'>Submit</button>
+                  <button onClick={handleCancel} className='cancel-btn'>Cancel</button>
+                </div>
             </form>
         )}
 
@@ -115,10 +117,10 @@ function Skills({
                     <div key={index} className="item-row">
                         <p>{item.skill}</p>
                         {!isEditing && (
-                        <>
-                            <button onClick={() => handleEdit(index)}>Edit</button>
-                            <button onClick={() => handleDelete(index)}>Delete</button>
-                        </>
+                        <div className='button-container'>
+                            <button onClick={() => handleEdit(index)} className='edit-btn'>Edit</button>
+                            <button onClick={() => handleDelete(index)} className='cancel-btn'>Delete</button>
+                        </div>
                         )}
                     </div>
                     ))}

@@ -98,7 +98,7 @@ function WorkExperience({
       </div>
 
       {!isAdding && !isEditing && (
-        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleAdd} className='add-btn'>Add</button>
       )}
 
       {(isAdding || isEditing) && (
@@ -152,8 +152,10 @@ function WorkExperience({
             />
           </div>
 
-          <button onClick={handleSubmit}>Submit</button>
-          <button onClick={handleCancel}>Cancel</button>
+          <div className="form-button-group">
+              <button onClick={handleSubmit} className='submit-btn'>Submit</button>
+              <button onClick={handleCancel} className='cancel-btn'>Cancel</button>
+          </div>
         </form>
       )}
 
@@ -166,14 +168,14 @@ function WorkExperience({
             <p>{item.company}</p>
 
             {!isEditing && (
-              <>
+              <div className='button-container'>
                 <button onClick={() => handleEdit(index)}>
                   Edit
                 </button>
                 <button onClick={() => handleDelete(index)}>
                   Delete
                 </button>
-              </>
+              </div>
             )}
           </div>
         ))}

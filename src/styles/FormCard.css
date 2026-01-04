@@ -37,6 +37,7 @@ input {
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 /* Multi-line description fields */
@@ -51,22 +52,128 @@ textarea {
     box-sizing: border-box;
 }
 
-/* Submit button */
-.submit-btn {
+/* Add Button */
+.add-btn {
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: .5rem;
+  
+    background-color: #4a90e2; /* nice blue */
     color: white;
-    background-color: #2563eb; 
+  
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #357ab8;
+    transform: translateY(-1px);
+  }
+  
+  .add-btn:active {
+    transform: translateY(1px);
+  }
+
+  .form-button-group {
+    display: flex;
+    gap: 0.5rem;      /* space between buttons */
+  }
+
+  .submit-btn {
+    background-color: #4CAF50; /* green */
+    color: white;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-btn {
+    background-color: #f44336; /* red */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #da190b;
+  }
+  
+  
 
-.submit-btn:hover {
-    background-color: #1e4fd8;
-}
+/* List container */
+.item-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Individual row */
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+  
+    background-color: #f9f9f9;
+    border: 1px solid #e6e6e6;
+  
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .item-row:hover {
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Text inside the row */
+  .item-row p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  /* Button wrapper */
+  .button-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Buttons */
+  .button-container button {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  
+    background-color: #eaeaea;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button-container button:hover {
+    background-color: #dcdcdc;
+  }
+  
+  /* Delete button emphasis */
+  .button-container button:last-child {
+    color: #b00020;
+  }
 
 
 
