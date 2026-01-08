@@ -126,11 +126,7 @@ function App() {
             projectItems={projectItems}
           />
         </PDFViewer>
-
-        
       </div>
-
-
 
       <div className="form-container">
         <BasicInfo
