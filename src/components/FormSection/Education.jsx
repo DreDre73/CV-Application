@@ -121,7 +121,7 @@ function Education({
           <div className="input-group">
             <label>Start Date</label>
             <input
-              type="date"
+              type="text"
               name="startDate"
               value={educationDraft.startDate}
               onChange={handleDraftChange}
@@ -131,7 +131,7 @@ function Education({
           <div className="input-group">
             <label>End Date</label>
             <input
-              type="date"
+              type="text"
               name="endDate"
               value={educationDraft.endDate}
               onChange={handleDraftChange}

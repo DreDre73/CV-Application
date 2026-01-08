@@ -1,37 +1,38 @@
 .page-container {
     display: grid;
-    grid-template-rows: auto 1fr;   /* Header height + content row */
-    grid-template-columns: 1fr 3fr; /* Form column + Preview column */
-    height: 100vh;                  /* Full viewport height */
+    grid-template-rows: auto 1fr;   
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;                  
 }
 
 .header {
-    grid-column: 1 / 3;             /* Span both columns */
-    background-color: #f5f5f5;      /* Optional styling */
+    grid-column: 1 / 3;             
+    background-color: #f5f5f5;      
     border-bottom: 1px solid #ddd;
 }
 
 .form-container {
-    grid-column: 1 / 2;             /* Left column */
+    grid-column: 1 / 2;             
     padding: 1.5rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 
-    height: 100%;                   /* Fill its grid row */
-    overflow-y: auto;               /* Scroll only the form content */
-    background-color: #fff;         /* Optional background */
-    border-right: 1px solid #ddd;   /* Optional separation from preview */
+    height: 100%;                  
+    overflow-y: auto;               
+    background-color: #fff;         
+    border-right: 1px solid #ddd;   
 }
 
 .pdf-container {
-    grid-column: 2 / 3;             /* Right column */
-    grid-row: 2 / 3;                /* Second row */
-    background-color: lightgray;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin: 1.5rem;
-
-    height: 100%;                   /* Fill the grid row */
-    /* No scroll needed; preview stays fully visible */
+    grid-column: 2 / 3;             
+    grid-row: 2 / 3;                
+    height: 100%;                   
+    display: flex;
+    justify-content: center;
 }
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+  }

@@ -135,7 +135,7 @@ function WorkExperience({
           <div className="input-group">
             <label>Start Date</label>
             <input
-              type="date"
+              type="text"
               name="startDate"
               value={workExperienceDraft.startDate}
               onChange={handleDraftChange}
@@ -145,7 +145,7 @@ function WorkExperience({
           <div className="input-group">
             <label>End Date</label>
             <input
-              type="date"
+              type="text"
               name="endDate"
               value={workExperienceDraft.endDate}
               onChange={handleDraftChange}
