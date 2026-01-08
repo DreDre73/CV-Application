@@ -27,3 +27,7 @@ A responsive web application to create, view, and download a professional CV/res
 2. Preview your CV in real-time in the PDF viewer.
 3. Click **Download PDF** to export your resume.
 
+## Preview
+
+Live Preview: https://cv-nest.netlify.app/
+
