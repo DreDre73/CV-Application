@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
     underline: {
-        borderBottomWidth: 1,
+        borderBottomWidth: 0.8,
         borderBottomColor: 'black',
         marginBottom: 2,
     },
